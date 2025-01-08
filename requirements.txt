@@ -5,4 +5,5 @@ pinecone
 pypdf
 flask
 sentence-transformers
+langchain_huggingface
 -e .

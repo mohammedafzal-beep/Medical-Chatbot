@@ -1,21 +1,21 @@
 from flask import Flask, render_template, request
 from src.helper import download_hugging_face_embeddings
-from langchain.vectorstores import Pinecone
-from pinecone import Pinecone
+from langchain_community.vectorstores import Pinecone
 from langchain.prompts import PromptTemplate
-from langchain.llms import CTransformers
+from langchain_community.llms import CTransformers
 from langchain.chains import RetrievalQA
 from src.prompt import *
+import os
 
 app = Flask(__name__)
 
-with open(r'C:\Users\afz31\rag_chatbot\api_key.txt', "r") as file:
+with open(r'C:\Users\afz31\RAG\api_key.txt', "r") as file:
     PINECONE_API_KEY = file.read()
+
+os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
 
 embeddings = download_hugging_face_embeddings()
 
-#Initializing the Pinecone
-pc=Pinecone(api_key=PINECONE_API_KEY)
 
 index_name="medical-chatbot"
 
