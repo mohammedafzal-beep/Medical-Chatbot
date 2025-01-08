@@ -1,0 +1,8 @@
+langchain_community
+langchain
+langchain_google_genai
+pinecone
+pypdf
+flask
+sentence-transformers
+-e .
