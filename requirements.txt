@@ -1,4 +1,5 @@
 langchain_community
 langchain
 flask
+langchain_huggingface
 -e .
