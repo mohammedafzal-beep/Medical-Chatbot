@@ -1,4 +1,4 @@
 .venv
 api_key.txt
 RAG.egg-info
-__pycache__
+__pycache__/
